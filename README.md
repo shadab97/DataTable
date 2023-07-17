@@ -1,5 +1,5 @@
 
-Live link [Next.js](https://data-table-mu.vercel.app/)
+# Live link [Next.js](https://data-table-mu.vercel.app/)
 
 
 ## Tech Stack
@@ -95,6 +95,7 @@ const rows = [
 ```
 
 
+![UI](https://github.com/shadab97/DataTable/blob/main/screencapture-data-table-mu-vercel-app-2023-07-18-01_05_33.png)
 
 
 
