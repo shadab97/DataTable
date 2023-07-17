@@ -1,9 +1,7 @@
+import { usePaginationProps } from '@/interface';
 import { useState, useEffect } from 'react';
 
-type usePaginationProps = {
-    data: Record<string, any>[],
-    itemsPerPage: number
-}
+
 const usePagination = ({ data, itemsPerPage }: usePaginationProps) => {
     const [paginatedData, setPaginatedData] = useState<Record<string, any>[]>([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -20,10 +18,12 @@ const usePagination = ({ data, itemsPerPage }: usePaginationProps) => {
     };
 
     return {
+        paginateData,
         paginatedData,
         setPaginatedData,
         currentPage,
         setCurrentPage,
+        totalPage: Math.ceil(data.length / itemsPerPage)
     };
 };
 

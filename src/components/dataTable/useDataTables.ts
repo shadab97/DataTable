@@ -4,8 +4,9 @@ import React, { useEffect, useState } from 'react'
 import usePagination from '../pagination/usePagination';
 
 const useDataTables = ({ rows }: Pick<TypeDataTable, "rows">) => {
-    const { paginatedData, currentPage, setCurrentPage, } = usePagination({ data: rows, itemsPerPage: 10 });
-    const [data, setData] = useState<Record<string, any>[]>(paginatedData);
+    const [searchQuery, setSearchQuery] = useState<string>("")
+    const [data, setData] = useState<Record<string, any>[]>(rows);
+    const { paginatedData, totalPage, currentPage, setCurrentPage } = usePagination({ data: data, itemsPerPage: 10 });
 
     const [sort, setSort] = useState<SortState>({
         by: undefined,
@@ -17,8 +18,9 @@ const useDataTables = ({ rows }: Pick<TypeDataTable, "rows">) => {
             by: key,
             order: prev.order === "asc" ? "desc" : "asc"
         }));
+        setCurrentPage(1)
         setData(
-            sortData(data, {
+            sortData(paginatedData, {
                 by: key,
                 order: sort.order === "asc" ? "desc" : "asc"
             })
@@ -33,17 +35,31 @@ const useDataTables = ({ rows }: Pick<TypeDataTable, "rows">) => {
             return "▼";
         }
     };
-    useEffect(() => {
-        setData(paginatedData)
-    }, [paginatedData])
+
+    const handleSearch = (query: string) => {
+        setSearchQuery(query);
+        filterData(query);
+    };
+
+    const filterData = (query: string) => {
+        const filteredData = rows.filter((row) =>
+            Object.values(row).some((value) =>
+                value.toString().toLowerCase().includes(query.toLowerCase())
+            )
+        );
+        setData(filteredData);
+
+    };
+
     return {
-        data,
+        data: paginatedData,
         sort,
         showSortIcon,
         handleHeaderClick,
+        handleSearch,
         currentPage,
         setCurrentPage,
-
+        totalPage
     }
 }
 

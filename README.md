@@ -1,3 +1,103 @@
+
+Live link [Next.js](https://data-table-mu.vercel.app/)
+
+
+## Tech Stack
+1. NextJs 13
+2. Tailwind,
+3. typescript
+
+functionality   
+1. searching,
+2. sorting (click on header)
+3. custom cell UI with renderer function
+4. 
+
+## usage overview
+
+### header array
+```javascript
+
+const headers: headObject[] = [
+  {
+    label: "Name",
+    key: "name",
+    onClick: (key, row) => {
+      console.log(key, row);
+    },
+    renderer: (key, row) => {
+      return <div className=' py-1 px-3  bg-indigo-600 text-white rounded-md w-auto inline-block'>{row[key]}</div>;
+    }
+  },
+  {
+    label: "ID",
+    key: "id",
+    onClick: (key, row) => {
+      console.log(key, row);
+    }
+  },
+
+  {
+    label: "Age",
+    key: "age"
+  },
+  {
+    label: "Class",
+    key: "class",
+    renderer: (key, row) => {
+      return <div className=' py-1 px-3  bg-green-500 text-white rounded-full w-auto inline-block'>{row[key]}</div>;
+    }
+  }
+];
+
+```
+### data array
+```javascript
+
+const rows = [
+  {
+    "id": 1,
+    "name": "test-xyz",
+    "age": 68,
+    "class": 5
+  },
+  {
+    "id": 2,
+    "name": "test-abc",
+    "age": 44,
+    "class": 6
+  },
+  {
+    "id": 3,
+    "name": "test-xyz",
+    "age": 61,
+    "class": 9
+  },
+  {
+    "id": 4,
+    "name": "test-abc",
+    "age": 1,
+    "class": 10
+  },
+  {
+    "id": 5,
+    "name": "test-xyz",
+    "age": 52,
+    "class": 10
+  },
+]
+
+```
+
+### component array
+```javascript
+ <DataTable showSearch headers={headers} rows={rows} caption='Oranges' />
+```
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

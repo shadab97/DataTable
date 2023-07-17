@@ -35,351 +35,357 @@ const headers: headObject[] = [
 const rows = [
   {
     "id": 1,
-    "name": "test 1",
-    "age": 53,
-    "class": 8
-  },
-  {
-    "id": 2,
-    "name": "test 2",
-    "age": 18,
+    "name": "test-xyz",
+    "age": 68,
     "class": 5
   },
   {
-    "id": 3,
-    "name": "test 3",
-    "age": 92,
-    "class": 8
+    "id": 2,
+    "name": "test-abc",
+    "age": 44,
+    "class": 6
   },
   {
-    "id": 4,
-    "name": "test 4",
-    "age": 51,
+    "id": 3,
+    "name": "test-xyz",
+    "age": 61,
     "class": 9
   },
   {
+    "id": 4,
+    "name": "test-abc",
+    "age": 1,
+    "class": 10
+  },
+  {
     "id": 5,
-    "name": "test 5",
-    "age": 33,
-    "class": 7
+    "name": "test-xyz",
+    "age": 52,
+    "class": 10
   },
   {
     "id": 6,
-    "name": "test 6",
-    "age": 84,
+    "name": "test-abc",
+    "age": 46,
     "class": 10
   },
   {
     "id": 7,
-    "name": "test 7",
-    "age": 25,
-    "class": 10
+    "name": "test-xyz",
+    "age": 10,
+    "class": 9
   },
   {
     "id": 8,
-    "name": "test 8",
-    "age": 71,
-    "class": 9
+    "name": "test-abc",
+    "age": 21,
+    "class": 5
   },
   {
     "id": 9,
-    "name": "test 9",
-    "age": 25,
-    "class": 6
-  },
-  {
-    "id": 10,
-    "name": "test 10",
-    "age": 81,
+    "name": "test-xyz",
+    "age": 31,
     "class": 1
   },
   {
+    "id": 10,
+    "name": "test-abc",
+    "age": 67,
+    "class": 10
+  },
+  {
     "id": 11,
-    "name": "test 11",
-    "age": 77,
-    "class": 6
+    "name": "test-xyz",
+    "age": 11,
+    "class": 10
   },
   {
     "id": 12,
-    "name": "test 12",
-    "age": 25,
-    "class": 9
+    "name": "test-abc",
+    "age": 37,
+    "class": 10
   },
   {
     "id": 13,
-    "name": "test 13",
-    "age": 40,
-    "class": 9
-  },
-  {
-    "id": 14,
-    "name": "test 14",
-    "age": 97,
+    "name": "test-xyz",
+    "age": 63,
     "class": 3
   },
   {
+    "id": 14,
+    "name": "test-abc",
+    "age": 93,
+    "class": 4
+  },
+  {
     "id": 15,
-    "name": "test 15",
-    "age": 68,
-    "class": 7
+    "name": "test-xyz",
+    "age": 11,
+    "class": 3
   },
   {
     "id": 16,
-    "name": "test 16",
-    "age": 55,
+    "name": "test-abc",
+    "age": 89,
     "class": 10
   },
   {
     "id": 17,
-    "name": "test 17",
-    "age": 32,
-    "class": 2
+    "name": "test-xyz",
+    "age": 58,
+    "class": 4
   },
   {
     "id": 18,
-    "name": "test 18",
-    "age": 90,
-    "class": 10
-  },
-  {
-    "id": 19,
-    "name": "test 19",
-    "age": 68,
-    "class": 1
-  },
-  {
-    "id": 20,
-    "name": "test 20",
-    "age": 17,
+    "name": "test-abc",
+    "age": 41,
     "class": 5
   },
   {
-    "id": 21,
-    "name": "test 21",
-    "age": 49,
-    "class": 6
+    "id": 19,
+    "name": "test-xyz",
+    "age": 51,
+    "class": 2
   },
   {
-    "id": 22,
-    "name": "test 22",
-    "age": 67,
-    "class": 3
-  },
-  {
-    "id": 23,
-    "name": "test 23",
-    "age": 16,
-    "class": 7
-  },
-  {
-    "id": 24,
-    "name": "test 24",
-    "age": 6,
+    "id": 20,
+    "name": "test-abc",
+    "age": 3,
     "class": 9
   },
   {
-    "id": 25,
-    "name": "test 25",
-    "age": 25,
-    "class": 3
+    "id": 21,
+    "name": "test-xyz",
+    "age": 13,
+    "class": 5
   },
   {
-    "id": 26,
-    "name": "test 26",
-    "age": 97,
+    "id": 22,
+    "name": "test-abc",
+    "age": 1,
     "class": 7
   },
   {
-    "id": 27,
-    "name": "test 27",
-    "age": 23,
+    "id": 23,
+    "name": "test-xyz",
+    "age": 55,
     "class": 8
   },
   {
-    "id": 28,
-    "name": "test 28",
-    "age": 3,
+    "id": 24,
+    "name": "test-abc",
+    "age": 95,
     "class": 10
   },
   {
+    "id": 25,
+    "name": "test-xyz",
+    "age": 64,
+    "class": 2
+  },
+  {
+    "id": 26,
+    "name": "test-abc",
+    "age": 95,
+    "class": 2
+  },
+  {
+    "id": 27,
+    "name": "test-xyz",
+    "age": 37,
+    "class": 5
+  },
+  {
+    "id": 28,
+    "name": "test-abc",
+    "age": 60,
+    "class": 5
+  },
+  {
     "id": 29,
-    "name": "test 29",
-    "age": 65,
-    "class": 3
+    "name": "test-xyz",
+    "age": 73,
+    "class": 1
   },
   {
     "id": 30,
-    "name": "test 30",
-    "age": 33,
+    "name": "test-abc",
+    "age": 56,
     "class": 4
   },
   {
     "id": 31,
-    "name": "test 31",
-    "age": 86,
-    "class": 4
+    "name": "test-xyz",
+    "age": 70,
+    "class": 5
   },
   {
     "id": 32,
-    "name": "test 32",
-    "age": 19,
-    "class": 2
+    "name": "test-abc",
+    "age": 48,
+    "class": 4
   },
   {
     "id": 33,
-    "name": "test 33",
-    "age": 46,
+    "name": "test-xyz",
+    "age": 82,
     "class": 8
   },
   {
     "id": 34,
-    "name": "test 34",
-    "age": 55,
-    "class": 4
+    "name": "test-abc",
+    "age": 5,
+    "class": 2
   },
   {
     "id": 35,
-    "name": "test 35",
-    "age": 91,
-    "class": 9
-  },
-  {
-    "id": 36,
-    "name": "test 36",
-    "age": 52,
+    "name": "test-xyz",
+    "age": 41,
     "class": 1
   },
   {
+    "id": 36,
+    "name": "test-abc",
+    "age": 23,
+    "class": 2
+  },
+  {
     "id": 37,
-    "name": "test 37",
+    "name": "test-xyz",
     "age": 47,
     "class": 1
   },
   {
     "id": 38,
-    "name": "test 38",
-    "age": 38,
-    "class": 10
+    "name": "test-abc",
+    "age": 31,
+    "class": 9
   },
   {
     "id": 39,
-    "name": "test 39",
-    "age": 65,
-    "class": 3
+    "name": "test-xyz",
+    "age": 50,
+    "class": 2
   },
   {
     "id": 40,
-    "name": "test 40",
-    "age": 8,
+    "name": "test-abc",
+    "age": 51,
     "class": 8
   },
   {
     "id": 41,
-    "name": "test 41",
-    "age": 12,
-    "class": 3
+    "name": "test-xyz",
+    "age": 93,
+    "class": 6
   },
   {
     "id": 42,
-    "name": "test 42",
-    "age": 94,
-    "class": 8
+    "name": "test-abc",
+    "age": 2,
+    "class": 10
   },
   {
     "id": 43,
-    "name": "test 43",
-    "age": 60,
-    "class": 1
+    "name": "test-xyz",
+    "age": 23,
+    "class": 9
   },
   {
     "id": 44,
-    "name": "test 44",
-    "age": 78,
+    "name": "test-abc",
+    "age": 33,
     "class": 6
   },
   {
     "id": 45,
-    "name": "test 45",
-    "age": 72,
-    "class": 7
+    "name": "test-xyz",
+    "age": 60,
+    "class": 6
   },
   {
     "id": 46,
-    "name": "test 46",
-    "age": 31,
+    "name": "test-abc",
+    "age": 9,
     "class": 7
   },
   {
     "id": 47,
-    "name": "test 47",
-    "age": 80,
-    "class": 7
-  },
-  {
-    "id": 48,
-    "name": "test 48",
-    "age": 82,
-    "class": 6
-  },
-  {
-    "id": 49,
-    "name": "test 49",
-    "age": 25,
-    "class": 4
-  },
-  {
-    "id": 50,
-    "name": "test 50",
-    "age": 68,
+    "name": "test-xyz",
+    "age": 22,
     "class": 2
   },
   {
-    "id": 51,
-    "name": "test 51",
-    "age": 42,
+    "id": 48,
+    "name": "test-abc",
+    "age": 46,
     "class": 8
   },
   {
-    "id": 52,
-    "name": "test 52",
-    "age": 43,
-    "class": 5
+    "id": 49,
+    "name": "test-xyz",
+    "age": 42,
+    "class": 7
   },
   {
-    "id": 53,
-    "name": "test 53",
-    "age": 6,
-    "class": 3
+    "id": 50,
+    "name": "test-abc",
+    "age": 87,
+    "class": 7
   },
   {
-    "id": 54,
-    "name": "test 54",
-    "age": 30,
+    "id": 51,
+    "name": "test-xyz",
+    "age": 84,
     "class": 10
   },
   {
-    "id": 55,
-    "name": "test 55",
-    "age": 30,
+    "id": 52,
+    "name": "test-abc",
+    "age": 3,
+    "class": 2
+  },
+  {
+    "id": 53,
+    "name": "test-xyz",
+    "age": 90,
+    "class": 10
+  },
+  {
+    "id": 54,
+    "name": "test-abc",
+    "age": 3,
     "class": 1
   },
   {
+    "id": 55,
+    "name": "test-xyz",
+    "age": 14,
+    "class": 5
+  },
+  {
     "id": 56,
-    "name": "test 56",
-    "age": 18,
-    "class": 6
+    "name": "test-abc",
+    "age": 48,
+    "class": 5
   },
   {
     "id": 57,
-    "name": "test 57",
-    "age": 44,
-    "class": 4
+    "name": "test-xyz",
+    "age": 91,
+    "class": 9
+  },
+  {
+    "id": 58,
+    "name": "test-abc",
+    "age": 50,
+    "class": 9
   }
 ]
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <DataTable headers={headers} rows={rows} caption='Oranges' />
+      <DataTable showSearch headers={headers} rows={rows} caption='Oranges' />
     </main>
   )
 }
