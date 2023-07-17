@@ -1,113 +1,385 @@
-import Image from 'next/image'
+'use client'
+import DataTable from '@/components/dataTable'
+import { headObject } from '@/interface';
+const headers: headObject[] = [
+  {
+    label: "Name",
+    key: "name",
+    onClick: (key, row) => {
+      console.log(key, row);
+    },
+    renderer: (key, row) => {
+      return <div className=' py-1 px-3  bg-indigo-600 text-white rounded-md w-auto inline-block'>{row[key]}</div>;
+    }
+  },
+  {
+    label: "ID",
+    key: "id",
+    onClick: (key, row) => {
+      console.log(key, row);
+    }
+  },
 
+  {
+    label: "Age",
+    key: "age"
+  },
+  {
+    label: "Class",
+    key: "class",
+    renderer: (key, row) => {
+      return <div className=' py-1 px-3  bg-green-500 text-white rounded-full w-auto inline-block'>{row[key]}</div>;
+    }
+  }
+];
+const rows = [
+  {
+    "id": 1,
+    "name": "test 1",
+    "age": 53,
+    "class": 8
+  },
+  {
+    "id": 2,
+    "name": "test 2",
+    "age": 18,
+    "class": 5
+  },
+  {
+    "id": 3,
+    "name": "test 3",
+    "age": 92,
+    "class": 8
+  },
+  {
+    "id": 4,
+    "name": "test 4",
+    "age": 51,
+    "class": 9
+  },
+  {
+    "id": 5,
+    "name": "test 5",
+    "age": 33,
+    "class": 7
+  },
+  {
+    "id": 6,
+    "name": "test 6",
+    "age": 84,
+    "class": 10
+  },
+  {
+    "id": 7,
+    "name": "test 7",
+    "age": 25,
+    "class": 10
+  },
+  {
+    "id": 8,
+    "name": "test 8",
+    "age": 71,
+    "class": 9
+  },
+  {
+    "id": 9,
+    "name": "test 9",
+    "age": 25,
+    "class": 6
+  },
+  {
+    "id": 10,
+    "name": "test 10",
+    "age": 81,
+    "class": 1
+  },
+  {
+    "id": 11,
+    "name": "test 11",
+    "age": 77,
+    "class": 6
+  },
+  {
+    "id": 12,
+    "name": "test 12",
+    "age": 25,
+    "class": 9
+  },
+  {
+    "id": 13,
+    "name": "test 13",
+    "age": 40,
+    "class": 9
+  },
+  {
+    "id": 14,
+    "name": "test 14",
+    "age": 97,
+    "class": 3
+  },
+  {
+    "id": 15,
+    "name": "test 15",
+    "age": 68,
+    "class": 7
+  },
+  {
+    "id": 16,
+    "name": "test 16",
+    "age": 55,
+    "class": 10
+  },
+  {
+    "id": 17,
+    "name": "test 17",
+    "age": 32,
+    "class": 2
+  },
+  {
+    "id": 18,
+    "name": "test 18",
+    "age": 90,
+    "class": 10
+  },
+  {
+    "id": 19,
+    "name": "test 19",
+    "age": 68,
+    "class": 1
+  },
+  {
+    "id": 20,
+    "name": "test 20",
+    "age": 17,
+    "class": 5
+  },
+  {
+    "id": 21,
+    "name": "test 21",
+    "age": 49,
+    "class": 6
+  },
+  {
+    "id": 22,
+    "name": "test 22",
+    "age": 67,
+    "class": 3
+  },
+  {
+    "id": 23,
+    "name": "test 23",
+    "age": 16,
+    "class": 7
+  },
+  {
+    "id": 24,
+    "name": "test 24",
+    "age": 6,
+    "class": 9
+  },
+  {
+    "id": 25,
+    "name": "test 25",
+    "age": 25,
+    "class": 3
+  },
+  {
+    "id": 26,
+    "name": "test 26",
+    "age": 97,
+    "class": 7
+  },
+  {
+    "id": 27,
+    "name": "test 27",
+    "age": 23,
+    "class": 8
+  },
+  {
+    "id": 28,
+    "name": "test 28",
+    "age": 3,
+    "class": 10
+  },
+  {
+    "id": 29,
+    "name": "test 29",
+    "age": 65,
+    "class": 3
+  },
+  {
+    "id": 30,
+    "name": "test 30",
+    "age": 33,
+    "class": 4
+  },
+  {
+    "id": 31,
+    "name": "test 31",
+    "age": 86,
+    "class": 4
+  },
+  {
+    "id": 32,
+    "name": "test 32",
+    "age": 19,
+    "class": 2
+  },
+  {
+    "id": 33,
+    "name": "test 33",
+    "age": 46,
+    "class": 8
+  },
+  {
+    "id": 34,
+    "name": "test 34",
+    "age": 55,
+    "class": 4
+  },
+  {
+    "id": 35,
+    "name": "test 35",
+    "age": 91,
+    "class": 9
+  },
+  {
+    "id": 36,
+    "name": "test 36",
+    "age": 52,
+    "class": 1
+  },
+  {
+    "id": 37,
+    "name": "test 37",
+    "age": 47,
+    "class": 1
+  },
+  {
+    "id": 38,
+    "name": "test 38",
+    "age": 38,
+    "class": 10
+  },
+  {
+    "id": 39,
+    "name": "test 39",
+    "age": 65,
+    "class": 3
+  },
+  {
+    "id": 40,
+    "name": "test 40",
+    "age": 8,
+    "class": 8
+  },
+  {
+    "id": 41,
+    "name": "test 41",
+    "age": 12,
+    "class": 3
+  },
+  {
+    "id": 42,
+    "name": "test 42",
+    "age": 94,
+    "class": 8
+  },
+  {
+    "id": 43,
+    "name": "test 43",
+    "age": 60,
+    "class": 1
+  },
+  {
+    "id": 44,
+    "name": "test 44",
+    "age": 78,
+    "class": 6
+  },
+  {
+    "id": 45,
+    "name": "test 45",
+    "age": 72,
+    "class": 7
+  },
+  {
+    "id": 46,
+    "name": "test 46",
+    "age": 31,
+    "class": 7
+  },
+  {
+    "id": 47,
+    "name": "test 47",
+    "age": 80,
+    "class": 7
+  },
+  {
+    "id": 48,
+    "name": "test 48",
+    "age": 82,
+    "class": 6
+  },
+  {
+    "id": 49,
+    "name": "test 49",
+    "age": 25,
+    "class": 4
+  },
+  {
+    "id": 50,
+    "name": "test 50",
+    "age": 68,
+    "class": 2
+  },
+  {
+    "id": 51,
+    "name": "test 51",
+    "age": 42,
+    "class": 8
+  },
+  {
+    "id": 52,
+    "name": "test 52",
+    "age": 43,
+    "class": 5
+  },
+  {
+    "id": 53,
+    "name": "test 53",
+    "age": 6,
+    "class": 3
+  },
+  {
+    "id": 54,
+    "name": "test 54",
+    "age": 30,
+    "class": 10
+  },
+  {
+    "id": 55,
+    "name": "test 55",
+    "age": 30,
+    "class": 1
+  },
+  {
+    "id": 56,
+    "name": "test 56",
+    "age": 18,
+    "class": 6
+  },
+  {
+    "id": 57,
+    "name": "test 57",
+    "age": 44,
+    "class": 4
+  }
+]
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <DataTable headers={headers} rows={rows} caption='Oranges' />
     </main>
   )
 }
